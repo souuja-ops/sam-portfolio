@@ -5,12 +5,8 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
-
-  // Check if deploying to GitHub Pages
-  const isGhPages = env.VITE_DEPLOY_TARGET === "gh-pages";
-
   return {
-    base: isGhPages ? `/${env.VITE_REPO_NAME}/` : "/", // Vercel uses "/"
+    base: `/${env.VITE_REPO_NAME}/`,
     plugins: [react(), tailwindcss()],
     server: {
       open: true,
@@ -25,4 +21,3 @@ export default defineConfig(({ mode }) => {
     },
   };
 });
-
