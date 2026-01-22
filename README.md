@@ -5,7 +5,7 @@
 1. Clone Repository
 
 ```
-git clone https://github.com/themewagon/picto.git
+https://github.com/souuja-ops/sam-portfolio.git
 ```
 
 2. Install Dependencies
@@ -25,4 +25,5 @@ pnpm dev
 # or
 bun dev
 ```
+
 
